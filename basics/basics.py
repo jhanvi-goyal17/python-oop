@@ -1,3 +1,28 @@
+"""name=input("Enter your name ")
+age=input("Enter your age ")
+is_student=input("are you a student True/False ")
+
+if is_student:
+  print(name," is a student ")
+
+else:
+  print(name," is not a student")
+
+for i in range(3):
+  print("year",i+1)
+
+name=input("Enter your name")
+print("hello," ,name)
+
+num=int(input("Enter a number"))
+a=0
+
+for i in range(1,num+1):
+  a= a+i
+print(a)"""
+
+
+
 """Name=input("enter a name")
 Object=input("enter an object")
 Place=input("enter a Place")
@@ -91,43 +116,3 @@ def translate(phrase):
 
 print(translate(input("Enter a phrase:")))
 """
-
-import json
-def view_tasks(tasks):
-  for index in tasks:
-    print(index)
-
-def add_tasks(tasks):
-  add_tasks=input("Enter a task:")
-  tasks.append(add_tasks)
-
-def delete_task(tasks):
-  delete_tasks=input("Enter task to be deleted:")
-  tasks.remove(delete_tasks)
-
-def save_tasks(tasks):
-  with open("tasks.json","w") as f:
-    json.dump(tasks,f)
-
-def load_tasks():
-  with open("tasks.json", "r")as f:
-    data=json.load(f)
-    return(data)
-  
-try:
-    tasks = load_tasks()
-except:
-  tasks=[]
-
-
-while True:
-  options=input("what do you want to do add/view/delete")
-  if options=="add":
-    add_tasks(tasks)
-    save_tasks(tasks)
-
-  elif options=="view":
-    view_tasks(tasks)
-  elif options=="delete":
-    delete_task(tasks)
-    save_tasks(tasks)
