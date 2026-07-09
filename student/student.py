@@ -11,3 +11,7 @@ stu_2=Student("Arshiya",17)
 
 stu_1.greet()
 stu_2.greet()
+
+#change
+
+print(stu_1.name)
